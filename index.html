@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script>
+			let arr = ["Ban", "app", "orange", "end"];
+
+			let Brr = [3, 1, 4, 0, 8, 100, 1, 4, 3];
+			let Drr = [3, 1, 4, 0, 8, 100, 1, 4, 3];
+			console.time('a');
+			let crr = [];
+			//去重之获取数组
+			Brr.forEach((item, index) => {
+				if (!crr.includes(item)) {
+					crr.push(item)
+				}
+				//排序				
+			})
+			crr.sort((a, b) => a - b)
+
+			console.log(crr);
+			console.timeEnd('a');
+
+
+			console.time('b');
+			for (let i = 0; i < Brr.length; i++) {
+				for (let j = 0; j < Brr.length; j++) {
+					if (Brr[i] = Brr[j]) {
+						Brr.splice(i, 1)
+					}
+				}
+			}
+			//排序	
+			crr.sort((a, b) => a - b)
+			console.log(crr);
+			console.timeEnd('b');
+
+			console.time('c');
+
+
+
+			Brr.map((item, index) => {
+				if (Brr.lastIndexOf(item) == Brr.length - 1 - (Brr.indexOf(item))) {
+					crr.push(item)
+				}
+			})
+			console.log(crr);
+			console.timeEnd('c');
+
+
+			console.time('d');
+			let drr = Drr.filter((item, index) => {
+				return Drr.indexOf(item) == index
+			})
+
+			for(i=0;i<drr.length;i++){
+				for(j=0;j<Drr.length-i+1;j++){
+
+					if(drr[i]<drr[j]){
+
+						sum=drr[i];
+						drr[i]=drr[j];
+						drr[j]=sum;
+
+					}
+
+
+
+						}
+					}
+
+
+			console.log(drr);
+			console.timeEnd('d');
+			
+			
+			
+
+
+			// 去重+排序
+			console.time('e');
+
+			let arr1 = [];
+			Drr.forEach(a => arr1[a] = 1);
+		
+			let res = Object.keys(arr1);
+			console.log(res);
+			console.timeEnd('e');
+			
+			
+			//去重
+			console.time('f');
+			let Frr=[... new Set(Drr)];
+			
+			console.log(Frr);
+			console.timeEnd('f');
+			
+		</script>
+	</body>
+</html>
