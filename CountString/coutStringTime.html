@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			console.error('%c' + '混沌','font-family:KaiTi;color:rgba(244,26,8,0.8);white-space:nowrap;font-size:100px;background-position:50% 0%;background-repeat:no-repeat;background-size:contain;background-image:url("https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fupload.mnw.cn%2F2017%2F0601%2F1496314022313.jpg&refer=http%3A%2F%2Fupload.mnw.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1640395499&t=bcae8cdb499ae801c8d3ca6b28931569")');
+			// function coutTime(text){
+			// 	let arr=text.split("")
+			// // 	console.log(text.split(""));
+			// let brr=	arr.filter((item,index)=>{
+
+
+			// 	return 	arr.indexOf(item)==index
+
+			// 	})
+			// let crr=[];
+
+			// let sum= 0;
+
+			// for(let i ; i<arr.length;i++){
+			// 	for(let j;j<brr.length;j++){
+			// 		if(brr[j]==arr[i]){
+			// 			sum++;
+
+			// 			crr.push(sum);
+			// 		}
+
+			// 	}
+			// }
+
+			// console.log(text.match(brr[0]));
+
+			// console.log(arr);
+			// console.log(brr)
+			// console.log(crr);
+
+			// console.log(brr.valueOf());
+			// }
+			// coutTime("aaaaaddaaaaa")
+			//原理
+			// 	let emp=[];
+			// 	let str ="aaaasaasdsdsdsd";
+			// 	const arr=str.split("");
+			// 	const brr=arr.sort();
+			// 	console.log(brr);
+
+			// 	const crr=brr.join("");
+			// 	console.log(crr);
+			// 	const drr=crr.split(crr[0])	
+			// 	console.log(drr);
+			// 	emp[drr.length-1]='a';
+			// 	console.log(emp);
+
+			// 	const err=drr.join("");
+			// 	console.log(err);
+			// 	const frr=err.split(err[0]);
+			// 	console.log(frr);
+			// 	emp[frr.length-1]='d';
+			// 	emp[5]='d';
+			// 	emp[5]='s';
+			// console.log(emp);
+			function fun(str) {
+				const arr = [];
+				let newStr = str.split('').sort().join('')
+			while(newStr){
+					let traArr=newStr.split(newStr[0]);
+					arr[traArr.length-1]=newStr[0];
+					 newStr = traArr.pop();
+				}
+				const len = arr.length;
+			return `出现最多次的是${arr.pop()},出现的次数是${len-1}`
+			}
+				
+	
+			
+		
+				
+			console.log(fun("asssssddddasss"));
+
+
+
+			console.warn('%c' + '秩序','font-family:KaiTi;color:rgba(115,141,247,0.65);font-size:100px;background-repeat:no-repeat;background-position:50% 0%;background-size:contain;background-image:url("https://img0.baidu.com/it/u=3912574483,3215076336&fm=26&fmt=auto")');
+		</script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			console.error('%c' + '混沌',
+				'font-family:KaiTi;color:rgba(244,26,8,0.8);white-space:nowrap;font-size:100px;background-position:50% 0%;background-repeat:no-repeat;background-size:contain;background-image:url("https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fupload.mnw.cn%2F2017%2F0601%2F1496314022313.jpg&refer=http%3A%2F%2Fupload.mnw.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1640395499&t=bcae8cdb499ae801c8d3ca6b28931569")'
+				);
+		
+
+	
+	let obj={}
+	//输入一个字符串
+	let  text="asdsssdddaasdasdd"
+	// console.log(text.length);
+	//将字符串利用for循环输入到对象里面
+	for(let i=0;i<text.length;i++){
+		!(obj[text[i]])?obj[text[i]]=1:obj[text[i]]+=1
+	}
+	
+	console.log(obj);
+	//此时关于出现次数的计数就完成了
+	//现在我们要将最大值通过Math.max来获取
+	//首先我们要对这个把对象里多个数组变成一个只放数据的数组
+	let crr=(Math.max(...Object.values(obj)))
+	console.log(crr);
+	//此时我们已经获取到了出现的字母里面的最大值，
+	//现在就需要把最大值和对应的字母进行匹配本次练习就结束了
+	// console.log(Object.keys(obj));
+	for(let i=0;i<Object.keys(obj).length;i++){
+		if(Object.values(obj)[i]===crr){
+			console.log(Object.keys(obj)[i]);
+		}
+	}
+	console.log(obj.indexOf(crr));
+					
+			console.warn('%c' + '秩序',
+				'font-family:KaiTi;color:rgba(115,141,247,0.65);font-size:100px;background-repeat:no-repeat;background-position:50% 0%;background-size:contain;background-image:url("https://img0.baidu.com/it/u=3912574483,3215076336&fm=26&fmt=auto")'
+				);
+		</script>
+	</body>
+</html>

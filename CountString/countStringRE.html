@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+	
+			let text="aaadddssdasdasd"
+			
+			//创建一个含数组值为0的26个数组的对象
+			let obj = new Array(26).fill(0);
+			
+			//循环字符，循环的次数是字符的长度
+//循环的内容是将字符的unicoed的数值以数组名的形式传入到对象
+			for(let str of text){
+				obj[(str.charCodeAt()-97)]+=1
+			}
+			console.log(obj);
+			let max=Math.max(...obj)
+			console.log(max);
+			//将97还给数组名，让他能还原成字符
+			console.log(obj.indexOf(max)); //利用indexOf来搜索对象中的数组值，返回数组名也就是索引值
+			console.log(String.fromCharCode(obj.indexOf(max)+97),max);
+			
+		</script>
+	</body>
+</html>
